@@ -19,7 +19,8 @@
             font-family: "Lato", sans-serif;
         }
 
-        ul, a {
+        ul,
+        a {
             list-style-type: none;
             text-decoration: none;
         }
@@ -77,9 +78,23 @@
             justify-content: center;
         }
 
-        .d-flex {
-            display: flex;
-            gap: 20px;
+        .lists a {
+            border: 1px solid #ffc107;
+            border-radius: 5px;
+            padding: 5px 20px;
+            color: #ffc107;
+            margin-top: 10px;
+            display: block;
+        }
+
+        .lists a:hover {
+            /* border: 1px solid #252525; */
+            border-radius: 5px;
+            padding: 5px 20px;
+            color: #252525;
+            background-color: #ffc107;
+            margin-top: 10px;
+            display: block;
         }
 
         .card {
@@ -98,6 +113,10 @@
             main {
                 padding: 0 25px;
             }
+
+            .d-grid {
+                display: block;
+            }
         }
     </style>
     <title>CV Rakha Zahran Nurfirmansyah</title>
@@ -110,15 +129,15 @@
     </div>
 
     <main>
-        
+
         <center>
             <img id="my-photo" src="V2.png" alt="Rakha Zahran Nurfirmansyah">
-            
+
             <!-- <h2 id="name">Rakha Zahran Nurfirmansyah</h2> -->
         </center>
 
         <div class="biodata">
-        
+
             <h3 style="font-weight: 700; margin-bottom: 10px;">Biodata</h3>
             <p>
                 Halo perkenalkan nama saya Rakha Zahran Nurfirmansyah, untuk saat ini saya berstatus sebagai Mahasiswa
@@ -172,38 +191,33 @@
 
         </div>
 
-        <!-- <div class="d-grid">
+        <div class="d-grid">
 
-            <div class="card contact">
+            <div class="contact">
 
                 <h3 style="font-weight: 700; margin-bottom: 10px;">Contact</h3>
-                <hr width="50%">
+                <hr>
 
-                <ul style="margin-top: 10px;">
-                    <li>
-                        <a href="#"><i class="bi bi-envelope"></i> Gmail</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="bi bi-instagram"></i> Instagram</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="bi bi-linkedin"></i> LinkedIn</a>
-                    </li>
-                </ul>
-
-            </div>
-            
-            <div class="skills">
-    
-                <h3 style="font-weight: 700; margin-bottom: 10px;">Skills</h3>
-    
-                <div class="d-flex">
-    
+                <div class="lists">
+                    <a href="#"><i class="bi bi-envelope"></i> Gmail</a>
+                    <a href="https://instagram.com/rakha_zan"><i class="bi bi-instagram"></i> Instagram</a>
+                    <a href="#"><i class="bi bi-linkedin"></i> LinkedIn</a>
                 </div>
-    
+
+
             </div>
 
-        </div> -->
+            <!-- <div class="skills">
+
+                <h3 style="font-weight: 700; margin-bottom: 10px;">Skills</h3>
+
+                <div class="d-flex">
+
+                </div>
+
+            </div> -->
+
+        </div>
 
 
     </main>
