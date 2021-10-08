@@ -73,9 +73,10 @@
 
         .d-grid {
             display: grid;
-            gap: 100px;
+            gap: 5rem;
             grid-template-columns: auto auto auto;
             justify-content: center;
+            align-content: start;
         }
 
         .lists a {
@@ -97,10 +98,36 @@
             display: block;
         }
 
-        .card {
+        .lists .link-dark {
+            border: 1px solid #212121;
+            border-radius: 5px;
+            padding: 5px 20px;
+            color: #212121;
+            margin-top: 10px;
+            display: block;
+        }
+        .lists .link-dark:hover {
+            /* border: 1px solid #212121; */
+            border-radius: 5px;
+            padding: 5px 20px;
+            color: #fff;
+            background-color: #212121;
+            margin-top: 10px;
+            display: block;
+        }
+
+        .cards {
+            padding-top: 10px;
+            display: grid;
+            gap: 10px;
+            grid-template-columns: auto auto auto;
+        }
+
+        .cards img {
+            width: 50px;
             border: 1px solid #252525;
             border-radius: 10px;
-            padding: 20px;
+            padding: 5px;
         }
 
         @media screen and (max-width: 991px) {
@@ -115,7 +142,9 @@
             }
 
             .d-grid {
-                display: block;
+                display: grid;
+                gap: 1rem;
+                grid-template-columns: 100%;
             }
         }
     </style>
@@ -185,7 +214,7 @@
                 <tr>
                     <th>Hobi</th>
                     <td>:</td>
-                    <td>Olahraga</td>
+                    <td>Olahraga | Ngoding | Design</td>
                 </tr>
             </table>
 
@@ -193,8 +222,20 @@
 
         <div class="d-grid">
 
-            <div class="contact">
+            <div class="grid-item">
+                <h3 style="font-weight: 700; margin-bottom: 10px;">Skills</h3>
+                <hr>
 
+                <div class="cards">
+                    <img src="html (1).png" alt="HTML 5">
+                    <img src="css.png" alt="CSS">
+                    <img src="php.png" alt="PHP">
+                    <img src="photoshop.png" alt="Photoshop">
+                    <img src="illustrator.png" alt="Illustrator">
+                </div>
+            </div>
+
+            <div class="grid-item">
                 <h3 style="font-weight: 700; margin-bottom: 10px;">Kontak</h3>
                 <hr>
 
@@ -203,19 +244,16 @@
                     <a href="https://instagram.com/rakha_zan"><i class="bi bi-instagram"></i> Instagram</a>
                     <a href="#"><i class="bi bi-linkedin"></i> LinkedIn</a>
                 </div>
-
-
             </div>
 
-            <!-- <div class="skills">
+            <div class="grid-item">
+                <h3 style="font-weight: 700; margin-bottom: 10px;">Other</h3>
+                <hr>
 
-                <h3 style="font-weight: 700; margin-bottom: 10px;">Skills</h3>
-
-                <div class="d-flex">
-
+                <div class="lists">
+                    <a href="https://rakhazan.github.io/My-Portofolio/" class="link-dark">My Portofolio</a>
                 </div>
-
-            </div> -->
+            </div>
 
         </div>
 
