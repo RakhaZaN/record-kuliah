@@ -73,32 +73,20 @@
 
         .d-grid {
             display: grid;
+            align-items: start;
+            justify-content: center;
             gap: 5rem;
             grid-template-columns: auto auto auto;
-            justify-content: center;
-            align-content: start;
         }
 
-        .lists a {
-            border: 1px solid #ffc107;
+        a {
             border-radius: 5px;
             padding: 10px 20px;
-            color: #ffc107;
             margin-top: 10px;
             display: block;
         }
 
-        .lists a:hover {
-            /* border: 1px solid #252525; */
-            border-radius: 5px;
-            padding: 10px 20px;
-            color: #252525;
-            background-color: #ffc107;
-            margin-top: 10px;
-            display: block;
-        }
-
-        .lists .link-dark {
+        .link {
             border: 1px solid #212121;
             border-radius: 5px;
             padding: 10px 20px;
@@ -106,14 +94,10 @@
             margin-top: 10px;
             display: block;
         }
-        .lists .link-dark:hover {
-            /* border: 1px solid #212121; */
-            border-radius: 5px;
-            padding: 10px 20px;
-            color: #fff;
-            background-color: #212121;
-            margin-top: 10px;
-            display: block;
+
+        .link:hover {
+            border: 1px solid #ffc107;
+            background-color: #ffc107;
         }
 
         .cards {
@@ -142,9 +126,12 @@
             }
 
             .d-grid {
-                display: grid;
                 gap: 1rem;
                 grid-template-columns: 100%;
+            }
+
+            .cards {
+                grid-template-columns: auto auto auto auto auto;
             }
         }
     </style>
@@ -240,9 +227,10 @@
                 <hr>
 
                 <div class="lists">
-                    <a href="#"><i class="bi bi-envelope"></i> Gmail</a>
-                    <a href="https://instagram.com/rakha_zan"><i class="bi bi-instagram"></i> Instagram</a>
-                    <a href="#"><i class="bi bi-linkedin"></i> LinkedIn</a>
+                    <a href="mailto:rakh21254ti@student.nurulfikri.ac.id" class="link"><i class="bi bi-envelope"></i> Gmail</a>
+                    <a href="https://instagram.com/rakha_zan" class="link"><i class="bi bi-instagram"></i> Instagram</a>
+                    <a href="https://www.linkedin.com/in/rakha-zahran-nurfirmansyah" class="link"><i
+                            class="bi bi-linkedin"></i> LinkedIn</a>
                 </div>
             </div>
 
@@ -251,8 +239,9 @@
                 <hr>
 
                 <div class="lists">
-                    <a href="https://rakhazan.github.io/My-Portofolio/" target="_blank" class="link-dark">My Portofolio</a>
-                    <a href="https://github.com/RakhaZaN" target="_blank" class="link-dark">Github</a>
+                    <a href="https://rakhazan.github.io/My-Portofolio/" target="_blank" class="link">My Portofolio</a>
+                    <a href="https://github.com/RakhaZaN" target="_blank" class="link">Github</a>
+                    <a href="https://dribbble.com/Rakha_Firmansyah" target="_blank" class="link">Dribbble</a>
                 </div>
             </div>
 
