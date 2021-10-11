@@ -77,6 +77,15 @@ nav .navs a:hover {
     padding: 10px;
 }
 
+.cart-item-table tbody tr td.item {
+    display: flex;
+    align-items: center;
+}
+
+td.item .desc {
+    margin-left: 1rem;
+}
+
 .cart-item-table tbody tr td img {
     width: 150px;
 }
