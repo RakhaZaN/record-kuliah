@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form Post</title>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="container-flex">
+            <a href="#">Home</a> |
+            <a href="#">Generate Link</a> |
+            <a href="#">Transaction History</a> |
+            <a href="#">Policy</a> |
+            <a href="#">Logout</a>
+        </div>
+    </nav>
+
+    <!-- main -->
+    <main>
+        <form action="">
+
+            <div class="container-flex">
+                <div class="col-1">
+                    <div class="kotak"></div>
+                    <input type="file" name="photo" id="photo" style="margin-top: 1rem;">
+                </div>
+                <div class="col-2">
+                    <table class="form-data-table" cellspacing="10">
+                        <tr>
+                            <td>Title Here</td>
+                            <td>:</td>
+                            <td>
+                                <input type="text" name="title" id="title" size="50">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: top;">Description</td>
+                            <td style="vertical-align: top;">:</td>
+                            <td>
+                                <textarea name="desc" id="desc" cols="50" rows="7"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Account Number</td>
+                            <td>:</td>
+                            <td>
+                                <input type="number" name="accNum" id="accNum" size="50">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Bank</td>
+                            <td>:</td>
+                            <td>
+                                <select name="bank" id="bank">
+                                    <option value="BRI">BRI</option>
+                                    <option value="Mandiri">Mandiri</option>
+                                    <option value="BNI">BNI</option>
+                                    <option value="BTN">BTN</option>
+                                    <option value="BCA">BCA</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Account Holder</td>
+                            <td>:</td>
+                            <td>
+                                <input type="text" name="accHold" id="accHold" size="50">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: top;">Transaction</td>
+                            <td style="vertical-align: top;">:</td>
+                            <td>
+                                <input type="number" name="tans" id="trans" size="1" value="1" >
+                                <br>
+                                <small>* if the transaction is 3 person, choose 3 from the drop-down list</small>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <input type="checkbox" name="cMobile" id="cMobile">
+                                <label for="cMobile">Send to Mobile Phone</label>
+                                <br>
+                                <input type="checkbox" name="cEmail" id="cEmail">
+                                <label for="cEmail">Send to Email</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Send to Mobile Phone</td>
+                            <td>:</td>
+                            <td>
+                                <input type="number" name="phone" id="phone" size="50">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Send to Email</td>
+                            <td>:</td>
+                            <td>
+                                <input type="email" name="email" id="email" size="50">
+                            </td>
+                        </tr>
+                        <tfoot>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td style="padding: 2rem 0;">
+                                    <button type="submit" style="background-color: green; color: white; padding: 5px 30px;">Generate Nobr Link</button>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+
+        </form>
+    </main>
+    
+</body>
+</html>
