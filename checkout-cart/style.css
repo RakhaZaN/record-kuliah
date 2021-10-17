@@ -90,6 +90,11 @@ td.item .desc {
     width: 150px;
 }
 
+.cart-success-table td {
+    padding: 5px 0;
+    border-bottom: 1px solid #1c0f21;
+}
+
 aside {
     height: fit-content;
     padding: 30px;
@@ -98,11 +103,16 @@ aside {
 }
 
 .total-table {
-    margin-bottom: 1rem;
+    margin: 1rem 0 0;
 }
 
 .total-table tbody tr td:last-child, .total-table tfoot tr td:last-child {
     text-align: right;
+}
+
+.total-table tfoot tr td {
+    border-top: 2px solid white;
+    padding: 10px 0;
 }
 
 .btn{
