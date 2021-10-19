@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    background-color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: 50px 100px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+main .profile {
+    display: flex;
+    gap: 50px;
+}
