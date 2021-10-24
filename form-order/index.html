@@ -25,7 +25,7 @@
 
         <p>Our 12" wood-fired pizzas are available for delevery. Build yout custom pizza and we'll deliver it within an hour</p>
 
-        <form action="order-success.html">
+        <form action="order-success.php" method="post">
             <fieldset>
                 <legend>Your Information</legend>
                 <!-- Form -->
@@ -89,20 +89,20 @@
                 <label for="opt4">Gluten-free</label> 
 
                 <p style="margin-bottom: 0;">Toppings (Choose as many as you want) :</p>
-                <input type="checkbox" name="rs" id="rs" value="Red Souce" checked>
+                <input type="checkbox" name="top1" id="rs" value="Red Souce" checked>
                 <label for="rs">Red Souce</label> <br>
-                <input type="checkbox" name="ws" id="ws" value="White Souce">
+                <input type="checkbox" name="top2" id="ws" value="White Souce">
                 <label for="ws">White Souce</label> <br>
-                <input type="checkbox" name="mc" id="mc" value="Mozzarella Cheese">
+                <input type="checkbox" name="top3" id="mc" value="Mozzarella Cheese">
                 <label for="mc">Mozzarella Cheese</label> <br>
-                <input type="checkbox" name="pep" id="pep" value="Pepperoni">
+                <input type="checkbox" name="top4" id="pep" value="Pepperoni">
                 <label for="pep">Pepperoni</label> <br>
-                <input type="checkbox" name="ms" id="ms" value="Mushroom">
-                <label for="rs">Mushroom</label> <br>
-                <input type="checkbox" name="pers" id="pers" value="Peppers">
+                <input type="checkbox" name="top5" id="ms" value="Mushroom">
+                <label for="ms">Mushroom</label> <br>
+                <input type="checkbox" name="top6" id="pers" value="Peppers">
                 <label for="pers">Peppers</label> <br>
-                <input type="checkbox" name="an" id="an" value="Anchovies">
-                <label for="rs">Anchovies</label> <br>
+                <input type="checkbox" name="top7" id="an" value="Anchovies">
+                <label for="an">Anchovies</label> <br>
 
                 <p style="margin-bottom: 0;">Number</p>
                 <label for="many">How many pizzas : </label>
