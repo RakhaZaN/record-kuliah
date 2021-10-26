@@ -16,6 +16,43 @@ main {
 }
 
 main .profile {
-    display: flex;
+    display: grid;
+    grid-template-columns: 20% auto;
     gap: 50px;
+}
+
+main .attach fieldset {
+    padding: 1rem 20px;
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        margin: 20px 50px;
+    }
+
+    section.attach video, section.attach iframe, section.attach fieldset {
+        width: 100%;
+        height: auto;
+    }
+
+    section.attach iframe, section.attach fieldset {
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    main {
+        margin: 1rem;
+    }
+
+    main .profile {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    main .profile .col-1 {
+        text-align: center;
+    }
 }
