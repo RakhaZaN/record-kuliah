@@ -11,11 +11,14 @@
             flex-wrap: wrap;
             justify-content: space-evenly;
         }
-        .h-2 {
-            height: 200px;
+        .box {
+            flex: 0 0 20%;
         }
-        .h-3 {
-            height: 300px;
+        img {
+            width: 100%;
+        }
+        .basis-2 {
+            flex-basis: 33%;
         }
     </style>
     <title>Praktikum 6.1</title>
@@ -23,14 +26,30 @@
 <body>
 
     <div class="container-flex">
-        <img class="h-3" src="./assets/6.jpg" alt="photo">
-        <img class="h-3" src="./assets/7.jpg" alt="photo">
-        <img class="h-3" src="./assets/8.jpg" alt="photo">
-        <img class="h-2" src="./assets/1.png" alt="photo">
-        <img class="h-2" src="./assets/2.png" alt="photo">
-        <img class="h-2" src="./assets/3.png" alt="photo">
-        <img class="h-2" src="./assets/4.png" alt="photo">
-        <img class="h-2" src="./assets/5.png" alt="photo">
+        <div class="box basis-2">
+            <img src="./assets/6.jpg" alt="photo">
+        </div>
+        <div class="box basis-2">
+            <img src="./assets/7.jpg" alt="photo">
+        </div>
+        <div class="box basis-2">
+            <img src="./assets/8.jpg" alt="photo">
+        </div>
+        <div class="box">
+            <img src="./assets/1.png" alt="photo">
+        </div>
+        <div class="box">
+            <img src="./assets/2.png" alt="photo">
+        </div>
+        <div class="box">
+            <img src="./assets/3.png" alt="photo">
+        </div>
+        <div class="box">
+            <img src="./assets/4.png" alt="photo">
+        </div>
+        <div class="box">
+            <img src="./assets/5.png" alt="photo">
+        </div>
     </div>
     
 </body>
