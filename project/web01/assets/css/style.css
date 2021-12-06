@@ -6,6 +6,10 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+.navbar-toggler {
+    font-size: 12px;
+}
+
 .input-group input {
     padding: 14px;
 }
@@ -36,5 +40,6 @@ body {
     }
     #home h1 {
         font-size: 30px;
+        margin-bottom: 1rem;
     }
 }
