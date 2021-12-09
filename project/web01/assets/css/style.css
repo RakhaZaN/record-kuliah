@@ -40,10 +40,42 @@ section {
 .heading {
     border-bottom: 1px solid var(--bs-gray-300);
     margin-bottom: 1rem;
+    font-weight: 600 !important;
 }
 
 #gallery img {
     width: 100%;
+}
+
+#title-banner {
+    font-weight: 700 !important;
+    font-size: 36px;
+}
+
+#reviews img {
+    max-height: 300px;
+    max-width: 100%;
+}
+
+.carousel-control-next {
+    right: -8rem;
+}
+
+.carousel-control-prev {
+    left: -8rem;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    border-radius: 100px;
+    background-color: var(--bs-light);
+    width: 100px;
+    height: 100px;
+    top: 30%;
+}
+
+.carousel-indicators {
+    /* justify-content: end !important; */
+    margin-bottom: -24px !important;
 }
 
 @media screen and (max-width: 768px) {
