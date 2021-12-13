@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Menghitung Lingkaran</legend>
+
+        <label for="r">Masukkan jari-jari : </label>
+        <input type="number" name="r" id="r">
+        <button onclick="lingkaran()">Hitung Luas dan Keliling</button>
+
+        <p>Luas : <span id="luas"></span></p>
+        <p>Keliling : <span id="keliling"></span></p>
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Kurs Rupiah</legend>
+
+        <table border="0">
+            <tr>
+                <th>Dollar</th>
+                <th>Rupiah</th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="number" name="dollar" id="dollar">
+                </td>
+                <td>
+                    <input type="number" name="rupiah" id="rupiah" readonly>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+
+    <fieldset>
+        <legend>Biaya Parkir</legend>
+
+        <label for="jm">Jam Masuk : </label>
+        <input type="number" name="jm" id="jm">
+        <br><br>
+        <label for="jk">Jam Keluar : </label>
+        <input type="number" name="jk" id="jk">
+        <button onclick="parkir()">Hitung biaya</button>
+        <p>Biaya : <span id="biaya"></span></p>
+    </fieldset>
+
+    <fieldset>
+        <legend>Menghitung Bilangan</legend>
+        <input type="number" name="bil1" id="bil1" value="0">
+        +
+        <input type="number" name="bil2" id="bil2" value="0">
+        =
+        <input type="number" name="result" id="result" readonly>
+    </fieldset>
+
+
+    <script>
+        // Menghitung Luas dan Keliling Lingkaran
+        function lingkaran() {
+            const r = document.getElementById('r').value;
+            const pi = r % 7 == 0 ? 22/7 : 3.14;
+            l = pi * r * r;
+            k = 2 * pi * r;
+            
+            document.getElementById('luas').innerHTML = l;
+            document.getElementById('keliling').innerHTML = k;
+        }
+
+        // Menghitung kurs Rupiah
+        const dollar = document.getElementById('dollar');
+        dollar.addEventListener('change', function() {
+            document.getElementById('rupiah').value = this.value * 14650;
+        });
+
+        // Menghitung parkir
+        function parkir() {
+            let lama = document.getElementById('jk').value - document.getElementById('jm').value;
+            let biaya = 3000;
+            lama -= 2;
+            biaya += lama > 0 ? lama*1000 : 0;
+            document.getElementById('biaya').innerHTML = biaya;
+        }
+
+        // Menghitung bilangan
+        const bil1 = document.getElementById('bil1');
+        const bil2 = document.getElementById('bil2');
+        const res = document.getElementById('result');
+
+        bil1.addEventListener('change', function () {
+            res.value = parseInt(this.value) + parseInt(bil2.value);
+        });
+        bil2.addEventListener('change', function () {
+            res.value = parseInt(bil1.value) + parseInt(this.value);
+        });
+
+
+    </script>
+</body>
+</html>

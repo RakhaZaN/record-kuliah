@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+    <title>Calculator Curs</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Kurs Rupiah - Mata Uang Asing</legend>
+        <table cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Masukkan Nilai</th>
+                    <th>Valas</th>
+                    <th>NIlai Rupiah</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="number" id="nilai" value="0"></td>
+                    <td>
+                        <select name="valas" id="valas">
+                            <option value="" selected disabled>----- Select -----</option>
+                            <option value="usd">Dolar US</option>
+                            <option value="ds">Dolar Singapore</option>
+                            <option value="ringgit">Ringgit Malaysia</option>
+                            <option value="yen">Yen Japan</option>
+                            <option value="euro">Euro Erope</option>
+                            <option value="riyal">Riyal Arab Saudi</option>
+                        </select>
+                    </td>
+                    <td><input type="number" name="rupiah" id="rupiah" readonly></td>
+                </tr>
+            </tbody>
+        </table>
+    </fieldset>
+
+
+    <script>
+        rp = document.getElementById('rupiah');
+        inp = document.getElementById('nilai');
+        valas = document.getElementById('valas');
+        // console.log(valas.value);
+
+        function konversi(value, mua) {
+            rupiah = 0;
+            if (mua == 'usd') {
+                rupiah = 9915;
+            } else if (mua == 'ds') {
+                rupiah = 13472;
+            } else if (mua == 'ringgit') {
+                rupiah = 874;
+            } else if (mua == 'yen') {
+                rupiah = 120;
+            } else if (mua == 'euro') {
+                rupiah = 15888;
+            } else if (mua == 'riyal') {
+                rupiah = 3592;
+            } else {
+                alert('Please Select Valas !');
+            }
+            // console.log(value * rupiah);
+            return value * rupiah;
+        }
+
+        valas.addEventListener('change', function() {
+            // console.log(this.value);
+            result = konversi(inp.value, this.value);
+            rp.value = result;
+        });
+
+        inp.addEventListener('input', function() {
+            result = konversi(this.value, valas.value);
+            rp.value = result;
+        })
+    </script>
+</body>
+
+</html>

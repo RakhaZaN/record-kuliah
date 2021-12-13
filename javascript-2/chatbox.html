@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .chatbox {
+            background-color: lightskyblue;
+            width: 18rem;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+        }
+        .chats {
+            width: 100%;
+            height: 200px;
+            border: 1px solid grey;
+            border-radius: 10px;
+            background-color: white;
+            margin-bottom: 1rem;
+            padding: 5px 10px;
+            display: relative;
+        }
+
+        .bubble {
+            background-color: whitesmoke;
+            width: fit-content;
+            display: absolute;
+            padding:1px 10px;
+            border-radius: 10px;
+            word-wrap: break-word;
+            margin-bottom: 5px;
+        }
+
+        .bubble p {
+            font-size: 14px;
+        }
+
+        .scroll-y {
+            overflow: auto;
+        }
+    </style>
+    <title>Chatbox</title>
+</head>
+<body>
+
+    <div class="chatbox">
+        <div id="chats" class="chats scroll-y">
+            <div class="bubble">
+                <p>Hai, kamu apa kabar?</p>
+            </div>
+            <div class="bubble">
+                <p>Yuk belajar bikin fitur chat sederhana menggunakan HTML, CSS, dan Javascript</p>
+            </div>
+        </div>
+        <div class="typing">
+            <input type="text" name="inp" id="inp" autofocus>
+            <button onclick="sendChat()">Submit</button>
+        </div>
+    </div>
+
+
+    <script>
+
+        const room = document.getElementById('chats');
+        const inp_chat = document.getElementById('inp');
+        
+        function sendChat() {
+            const chat = inp_chat.value;
+
+            if(chat.trim() != "") {
+                room.innerHTML += `<div class="bubble">
+                <p>${chat.trim}</p>
+            </div>`
+            }
+
+            inp_chat.value = "";
+            inp_chat.focus();
+        }
+
+    </script>
+    
+</body>
+</html>
