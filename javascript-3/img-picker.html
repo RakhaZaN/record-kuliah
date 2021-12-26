@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        img {
+            max-width: 100%;
+            max-height: 20rem;
+        }
+    </style>
+    <title>Image Picker</title>
+</head>
+<body>
+    <h1>Image Picker</h1>
+    <select name="img-select" id="img-select">
+        <option disabled selected>Select Image</option>
+        <option value="img-1">Image 1</option>
+        <option value="img-2">Image 2</option>
+        <option value="img-3">Image 3</option>
+    </select>
+    <br>
+    <img src="" alt="img" id="img-wrapper">
+
+
+    <script>
+        const selected = document.getElementById('img-select')
+        const img = document.getElementById('img-wrapper')
+        selected.addEventListener("change", function () {
+            img.src = "./assets/" + this.value + '.jpg'
+            // console.log(this.value + ".jpg")
+        })
+    </script>
+</body>
+</html>
