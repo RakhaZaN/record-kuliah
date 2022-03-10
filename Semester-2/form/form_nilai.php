@@ -16,7 +16,7 @@
             </div>
             <div class="card-body">
                 
-                <form method="GET" action="">
+                <form method="POST" action="./nilai_siswa.php">
                     <div class="form-group row">
                         <label for="nama" class="col-4 col-form-label">Nama Lengkap</label> 
                         <div class="col-8">
@@ -57,17 +57,6 @@
                         </div>
                     </div>
                 </form>
-
-                <?php
-                if (isset($_GET['submit'])) {
-                    echo "===== Data Disimpan ===== <br>
-                    Nama Siswa : {$_GET['nama']} <br>
-                    Mata Kuliah : {$_GET['matkul']} <br>
-                    Nilai UTS : {$_GET['uts']} <br>
-                    Nilai UAS : {$_GET['uas']} <br>
-                    Nilai Tugas Praktikum : {$_GET['tugas']}";
-                }
-                ?>
             </div>
             <div class="card-footer">
                 <small>Develop By @razan &copy;2022</small>
