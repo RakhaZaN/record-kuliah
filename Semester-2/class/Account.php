@@ -20,8 +20,8 @@ class Account {
 
     public function cetak()
     {
-        echo "<p>Nomor: {$this->nomor}</p>";
-        echo "<p>Saldo: {$this->saldo}</p>";
+        echo "Nomor: {$this->nomor} | ";
+        echo "Saldo: {$this->saldo} | ";
     }
 
 }
@@ -44,7 +44,7 @@ class AccountBank extends Account {
     public function cetak()
     {
         parent::cetak();
-        echo "<p>Customer: {$this->customer}</p>";
+        echo "Customer: {$this->customer} <br>";
     }
 }
 
@@ -57,6 +57,8 @@ $kurniawan = new AccountBank('C003', 6000000, 'Kurniawan');
 $ahmad->cetak();
 $budi->cetak();
 $kurniawan->cetak();
+echo "<hr>";
+echo "<p>Transaction</p>";
 // 1. Ahmad nabung 1.000.000
 $ahmad->deposit(1000000);
 // 2. Ahmad transfer 1.500.000 ke kurniawan dan 500.000 ke Budi
@@ -64,6 +66,7 @@ $ahmad->transfer($kurniawan, 1500000);
 $ahmad->transfer($budi, 500000);
 // 3. Budi tarik uang 2.500.000
 $budi->withdraw(2500000);
+echo "<hr>";
 // nilai akhir
 $ahmad->cetak();
 $budi->cetak();
