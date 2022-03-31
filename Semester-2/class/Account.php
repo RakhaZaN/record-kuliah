@@ -40,6 +40,12 @@ class AccountBank extends Account {
         $account->deposit($saldo);
         $this->withdraw($saldo);
     }
+
+    public function cetak()
+    {
+        parent::cetak();
+        echo "<p>Customer: {$this->customer}</p>";
+    }
 }
 
 $ahmad = new AccountBank('C001', 6000000, 'Ahmad');
@@ -47,6 +53,10 @@ $budi = new AccountBank('C002', 6000000, 'Budi');
 $kurniawan = new AccountBank('C003', 6000000, 'Kurniawan');
 
 // Simulasi
+// nilai awal
+$ahmad->cetak();
+$budi->cetak();
+$kurniawan->cetak();
 // 1. Ahmad nabung 1.000.000
 $ahmad->deposit(1000000);
 // 2. Ahmad transfer 1.500.000 ke kurniawan dan 500.000 ke Budi
@@ -54,3 +64,7 @@ $ahmad->transfer($kurniawan, 1500000);
 $ahmad->transfer($budi, 500000);
 // 3. Budi tarik uang 2.500.000
 $budi->withdraw(2500000);
+// nilai akhir
+$ahmad->cetak();
+$budi->cetak();
+$kurniawan->cetak();
